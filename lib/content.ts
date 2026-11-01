@@ -1,6 +1,5 @@
 export const EMAIL = 'sowmyapinninti724@gmail.com'
 export const LINKEDIN = 'https://www.linkedin.com/in/sowmyapinninti'
-const ORIGINAL_SITE = 'https://sowmyapinninti.github.io/Sowmya-Portfolio'
 
 export const NAV_LINKS = [
   { href: '#home', label: 'Home' },
@@ -28,7 +27,6 @@ export const PROJECTS: {
     description:
       'A premium SaaS product concept exploring how Rapido could create an additional recurring revenue stream while improving convenience and business intelligence for Captains and Drivers.',
     visual: 'rapido',
-    href: `${ORIGINAL_SITE}/rapido.html`,
   },
   {
     domain: 'Data / Product',
@@ -37,7 +35,6 @@ export const PROJECTS: {
     description:
       'A product insight dashboard designed to organise customer feedback and identify recurring themes that can support product decisions.',
     visual: 'dashboard',
-    href: `${ORIGINAL_SITE}/CloudfarePrototype.html`,
   },
   {
     domain: 'Fintech / Digital',
