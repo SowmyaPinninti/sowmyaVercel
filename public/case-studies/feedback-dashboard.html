@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback Insight Dashboard</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f8fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 28px;
+      color: #2563eb;
+    }
+
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .section h3 {
+      margin-top: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    /* BOT STYLES */
+    .bot {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: #2563eb;
+      border-radius: 50%;
+      color: white;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      animation: float 2s ease-in-out infinite;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .bot-message {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      width: 230px;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+    <div class="case-page">
+
+        <!-- BACK TO MAIN PORTFOLIO -->
+
+        <div class="back-wrapper">
+            <a href="/#projects" class="back-button">
+                ← BACK TO PORTFOLIO
+            </a>
+        </div>
+        <header>
+            Feedback Insight Dashboard
+        </header>
+
+        <div class="container">
+
+            <!-- OVERVIEW CARDS -->
+            <div class="cards">
+                <div class="card">
+                    <p>Total Feedback</p>
+                    <h2>124</h2>
+                </div>
+                <div class="card">
+                    <p>Positive</p>
+                    <h2>45</h2>
+                </div>
+                <div class="card">
+                    <p>Negative</p>
+                    <h2>52</h2>
+                </div>
+                <div class="card">
+                    <p>Neutral</p>
+                    <h2>27</h2>
+                </div>
+            </div>
+
+            <!-- AI SUMMARY -->
+            <div class="section">
+                <h3>AI Summary</h3>
+                <p>
+                    Users appreciate the updated UI but frequently report documentation confusion
+                    and unclear deployment errors. Performance concerns appear repeatedly across
+                    multiple channels.
+                </p>
+            </div>
+
+            <!-- THEMES -->
+            <div class="section">
+                <h3>Top Feedback Themes</h3>
+                <ul>
+                    <li>📘 Documentation issues (32 mentions)</li>
+                    <li>⚡ Performance & speed (26 mentions)</li>
+                    <li>🎨 UI usability (19 mentions)</li>
+                    <li>🚨 Deployment errors (14 mentions)</li>
+                </ul>
+            </div>
+
+            <!-- FEEDBACK TABLE -->
+            <div class="section">
+                <h3>Recent Feedback</h3>
+                <table>
+                    <tr>
+                        <th>Source</th>
+                        <th>Feedback</th>
+                        <th>Sentiment</th>
+                    </tr>
+                    <tr>
+                        <td>GitHub</td>
+                        <td>Deployment fails without clear reason</td>
+                        <td>Negative</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>Love the new dashboard UI</td>
+                        <td>Positive</td>
+                    </tr>
+                    <tr>
+                        <td>Discord</td>
+                        <td>Docs are confusing for beginners</td>
+                        <td>Negative</td>
+                    </tr>
+                    <tr>
+                        <td>Twitter</td>
+                        <td>Workers setup was smooth 👍</td>
+                        <td>Positive</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- BOT MESSAGE -->
+        <div class="bot-message" id="botMessage">
+            👋 Hi! <br><br>
+            You have an <b>important issue</b> today related to documentation complaints.
+        </div>
+
+        <!-- BOT ICON -->
+        <div class="bot" onclick="toggleBot()">🤖</div>
+
+        <script>
+            function toggleBot() {
+                const msg = document.getElementById("botMessage");
+                msg.style.display = msg.style.display === "block" ? "none" : "block";
+            }
+
+            // Auto show message after load
+            setTimeout(() => {
+                document.getElementById("botMessage").style.display = "block";
+            }, 1500);
+        </script>
+
+</body>
+</html>

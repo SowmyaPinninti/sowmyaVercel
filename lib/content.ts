@@ -27,6 +27,7 @@ export const PROJECTS: {
     description:
       'A premium SaaS product concept exploring how Rapido could create an additional recurring revenue stream while improving convenience and business intelligence for Captains and Drivers.',
     visual: 'rapido',
+    href: '/case-studies/rapido-pro',
   },
   {
     domain: 'Data / Product',
@@ -35,6 +36,7 @@ export const PROJECTS: {
     description:
       'A product insight dashboard designed to organise customer feedback and identify recurring themes that can support product decisions.',
     visual: 'dashboard',
+    href: '/case-studies/feedback-dashboard',
   },
   {
     domain: 'Fintech / Digital',
@@ -43,6 +45,7 @@ export const PROJECTS: {
     description:
       'Product thinking applied to digital insurance services, customer journeys and technology-enabled experiences.',
     visual: 'insurance',
+    href: '/case-studies/coming-soon',
   },
   {
     domain: 'AI / Product',
@@ -51,6 +54,7 @@ export const PROJECTS: {
     description:
       'Exploring how artificial intelligence can support backlog prioritisation, customer feedback analysis and roadmap planning.',
     visual: 'ai',
+    href: '/case-studies/coming-soon',
   },
 ]
 
